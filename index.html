@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop-Sticks | Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="common.css">
+        <link rel="icon" href="images/favicon1.png" type="image/ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="aos-master/aos-master/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <main class="main" id="blur">
+        <div class="container">
+            <section class="first">
+                <div class="bar">
+                    <div class="title">
+                        <img src="images/title.png" alt="titl">
+                    </div>
+                    <div class="options">
+                        <ul>
+                            <li>
+                                <a href="#home" class="link">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="link">About Us</a>
+                            </li>
+                            <li>
+                                <a href="menu.html" class="link">Menu</a>
+                            </li>
+                            <li>
+                                <a href="contact.html" class="link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="center">
+                        <button id="show-signin" onclick="openPopup()">Get the offer</button>
+                    </div>
+                    <form>
+                        <div class="overlay"></div>
+                        <div class="popup" id="poped">
+                            <div class="close-btn" onclick="closePopup()">&times;</div>
+                            <div class="form">
+                                <h2>Provide your details to access all offers!</h2>
+                                <div class="form-element">
+                                    <input type="text" id="name" required>
+                                    <label for="name" style="margin-right: 310px;">Full Name:</label>
+                                </div>
+                                <div class="form-element">
+                                    <input type="text" id="email" required>
+                                    <label for="email" style="margin-right: 345px;">Email:</label>
+                                </div>
+                                <div class="form-element">
+                                    <input type="text" id="number" required>
+                                    <label for="number" style="margin-right: 280px;">Phone Number:</label>
+                                </div>
+                                <div class="form-element">
+                                    <button id="showbutton" onclick="alert('Thank you! We will be sending you all offers.')">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Submit
+                                    </button>                             
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <hr class="one">
+            <article id="Home">
+            <section class="second">
+                <p class="welcome" data-aos="zoom-in" data-aos-duration="1400">Welcome to <span style="color: brown; text-shadow: 1px 1px 2px black, 0 0 30px brown, 0 0 5px red;">Shop-Sticks</span> !</p>
+                <p class="description" data-aos="zoom-in" data-aos-duration="1400">At <a href="#"><b>Shop-Sticks</b></a>, we bring the rich flavors and traditions of<br>Chinese cuirsine to your table.<br>Whether you're craving classic dishes like Sweet and Sour Chicken,<br>savory Kung Pao Chicken, or our signature gourmet creations,<br>we have something to delight every palate.</p>
+            </section>
+
+            <section>
+                <div class="opening">
+                    <h1 data-aos="zoom-in" data-aos-duration="1400">A Little Slice of China in Every Bite !</h1>
+                    <div class="images">
+                        <a href="menu.html" data-aos="fade-up" data-aos-duration="2000"><img src="images/food1.jpg" alt="food"></a>
+                        <a href="menu.html" data-aos="fade-up" data-aos-duration="2000"><img src="images/food2.jpg" alt="food"></a>
+                        <a href="menu.html" data-aos="fade-up" data-aos-duration="2000"><img src="images/food3.jpg" alt="food"></a>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="custom">
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Contact Us</h3><br>
+                        <p>Beirut - Badaro Street</p>
+                        <p>Phone: <a href="tel:+961 71 743516">+961 71 543516</a></p>
+                        <p>Email: <a href="mailto:shopsticks@gmail.com">shopsticks@gmail.com</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3><br>
+                        <div class="social-icons">
+                            <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="tel:+961 71 743516"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Shop-Sticks. All rights reserved.</p>
+                </div>
+            </footer>
+            </article>
+        </div>
+        </main>
+
+        <script src="link.js"></script>
+        <script src="aos-master/aos-master/dist/aos.js"></script> 
+        <script>
+        AOS.init({
+            offset: 1,
+        });
+        </script>
+    </body>
+</html>

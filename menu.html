@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop-Sticks | Menu</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style3.css">
+        <link rel="stylesheet" href="common.css">
+        <link rel="icon" href="images/favicon3.png" type="image/ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="aos-master/aos-master/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <section>
+            <div class="bar">
+                <div class="title">
+                    <img src="images/title.png" alt="titl">
+                </div>
+                <div class="options">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="link">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="link">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#Menu" class="link">Menu</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- -->
+                <div class="center">
+                    <button id="show-signin" onclick="openPopup()">Get the offer</button>
+                </div>
+                <form>
+                    <div class="overlay"></div>
+                    <div class="popup" id="poped">
+                        <div class="close-btn" onclick="closePopup()">&times;</div>
+                        <div class="form">
+                            <h2>Provide your details to access all offers!</h2>
+                            <div class="form-element">
+                                <input type="text" id="name" required>
+                                <label for="name" style="margin-right: 310px;">Full Name:</label>
+                            </div>
+                            <div class="form-element">
+                                <input type="text" id="email" required>
+                                <label for="email" style="margin-right: 345px;">Email:</label>
+                            </div>
+                            <div class="form-element">
+                                <input type="text" id="number" required>
+                                <label for="number" style="margin-right: 280px;">Phone Number:</label>
+                            </div>
+                            <div class="form-element">
+                                <button id="showbutton" onclick="alert('Thank you! We will be sending you all offers.')">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Submit
+                                </button>                             
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+            <hr class="one">
+            <div class="heading">
+                <h1 data-aos="zoom-in" data-aos-duration="1400">Food Menu</h1>
+                <h3 data-aos="zoom-in" data-aos-duration="1400">"Your taste buds will thank you."</h3>
+            </div>
+        </section>
+        <article id="#Menu">
+            <main class="main">
+                <div class="menu">
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/1.webp" alt="Ma Po Tofu" class="animated-image">
+                        <div class="..">
+                            <p class="name">Ma Po Tofu</p>
+                            <p class="Ingredients">Ingredients:<br>Tofu, ground pork, chili oil, Sichuan peppercorns, fermented black beans, garlic, ginger, scallions.</p>
+                            <p class="price" style="font-size: 18px;"><b>10$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/2.webp" alt="Spring Rolls" class="animated-image">
+                        <div class="..">
+                            <p class="name">Spring Rolls (5 pcs)</p>
+                            <p class="Ingredients">Ingredients:<br>Rice paper, vegetables (carrots, cabbage, bean sprouts), meat (optional: pork, shrimp), herbs (cilantro, mint), dipping sauce.</p>
+                            <p class="price" style="font-size: 18px;"><b>7.5$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/3.webp" alt="Chinese Dumplings" class="animated-image">
+                        <div class="..">
+                            <p class="name">Chinese Dumplings</p>
+                            <p class="Ingredients">Ingredients:<br>Ground pork or shrimp, vegetables (cabbage, chives, ginger), garlic, soy sauce, sesame oil, dumpling wrappers.</p>
+                            <p class="price" style="font-size: 18px;"><b>9$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/4.webp" alt="Chow Mein" class="animated-image">
+                        <div class="..">
+                            <p class="name">Chow Mein</p>
+                            <p class="Ingredients">Ingredients:<br>Noodles (egg noodles, lo mein), vegetables (carrots, celery, cabbage), protein (chicken, pork, shrimp), soy sauce, oyster sauce, ginger, garlic.</p>
+                            <p class="price" style="font-size: 18px;"><b>11$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/5.webp" alt="Sichuan Boiled Pork Slices" class="animated-image">
+                        <div class="..">
+                            <p class="name">Sichuan Boiled Pork Slices</p>
+                            <p class="Ingredients">Ingredients:<br>Pork belly, Sichuan peppercorns, ginger, garlic, scallions, chili oil, soy sauce</p>
+                            <p class="price" style="font-size: 18px;"><b>8.25$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/6.webp" alt="Sichuan Shredded Pork with Garlic Sauce" class="animated-image">
+                        <div class="..">
+                            <p class="name">Sichuan Shredded Pork with Garlic Sauce</p>
+                            <p class="Ingredients">Ingredients:<br>Pork, soy sauce, Shaoxing wine, garlic, ginger, scallions, chili oil, sugar, black vinegar, cornstarch, chili flakes, sesame oil, vegetable oil.</p>
+                            <p class="price" style="font-size: 18px;"><b>9.5$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/7.webp" alt="Chinese Pancakes" class="animated-image">
+                        <div class="..">
+                            <p class="name">Chinese Pancakes</p>
+                            <p class="Ingredients">Ingredients:<br>Green onions, Sesame oil, salt, optional (ginger, garlic, other seasonings)</p>
+                            <p class="price" style="font-size: 18px;"><b>6.25$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/8.webp" alt="Dan Dan Noodles/Sichuan Noodles" class="animated-image">
+                        <div class="..">
+                            <p class="name">Dan Dan Noodles/Sichuan Noodles</p>
+                            <p class="Ingredients">Ingredients:<br>Egg noodles, Sichuan peppercorns, chili oil, minced pork, scallions, soy sauce, sesame paste.</p>
+                            <p class="price" style="font-size: 18px;"><b>8.25$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/9.jpeg" alt="Salmon Tataki" class="animated-image">
+                        <div class="..">
+                            <p class="name">Salmon Tataki</p>
+                            <p class="Ingredients">Ingredients:<br>Salmon, sesame seeds, soy sauce, rice vinegar, sesame oil, green onions, ginger, chili flakes.</p>
+                            <p class="price" style="font-size: 18px;"><b>9.5$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/10.jpeg" alt="Shrimp Fried Rice" class="animated-image">
+                        <div class="..">
+                            <p class="name">Shrimp Fried Rice</p>
+                            <p class="Ingredients">Ingredients:<br>Shrimp, rice, eggs, onions, garlic, soy sauce, sesame oil, green onions.</p>
+                            <p class="price" style="font-size: 18px;"><b>6.75$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/11.jpeg" alt="Kung Pao Chicken" class="animated-image">
+                        <div class="..">
+                            <p class="name">Kung Pao Chicken</p>
+                            <p class="Ingredients">Ingredients:<br>Spicy caramelized chicken, chili pods, and peanuts | served with steamed rice.</p>
+                            <p class="price" style="font-size: 18px;"><b>11.5$</b></p>
+                        </div>
+                    </div>
+                    <div class="op" data-aos="fade-up" data-aos-duration="1600">
+                        <img src="menu/12.jpeg" alt="Shrimp Tempura" class="animated-image">
+                        <div class="..">
+                            <p class="name">Shrimp Tempura</p>
+                            <p class="Ingredients">Ingredients:<br>Spicy tempura shrimps, seeds | served with dynamite sauce</p>
+                            <p class="price" style="font-size: 18px;"><b>8$</b></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Contact Us</h3><br>
+                        <p>Beirut - Badaro Street</p>
+                        <p>Phone: <a href="tel:+961 71 743516">+961 71 543516</a></p>
+                        <p>Email: <a href="mailto:shopsticks@gmail.com">shopsticks@gmail.com</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3><br>
+                        <div class="social-icons">
+                            <a href="#facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="tel:+961 71 743516"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Shop-Sticks. All rights reserved.</p>
+                </div>
+            </footer>
+        </article>
+
+        <script src="link.js"></script>
+        <script src="aos-master/aos-master/dist/aos.js"></script> 
+        <script>
+        AOS.init({
+            offset: 1,
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,321 @@
+.bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title img{
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-top: 30px;
+    filter: drop-shadow(0 0 10px brown);
+}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    margin-top: 65px;
+    margin-left: 220px;
+    text-shadow: 1px 1px 2px black, 0 0 30px brown, 0 0 5px red;
+}
+li{
+    text-align: -webkit-match-parent;
+}
+.options a{
+    color:rgb(200, 170, 132);
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+}
+.link {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0.5rem;
+    position: relative;
+  }
+.link::before {
+    bottom: 0;
+    left: 0;
+}
+.link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(200, 170, 132);
+    box-shadow: 1px 1px 2px black, 0 0 30px brown, 0 0 5px red;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+}
+.link:hover::before {
+    transform: scaleX(1);
+}
+
+.center{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+    margin-top: 42px;
+}
+.center button{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(200, 170, 132);
+    text-shadow: 1px 1px 2px black, 0 0 30px brown, 0 0 5px red;
+    background: none;
+    border: 2px solid rgb(200, 170, 132);
+    padding: 9px 20px;
+    border-radius: 15px;
+    transition: all .6s ease;
+    outline: none;
+    cursor: pointer;
+}
+.center button:hover{
+    transform: translateY(-5px);
+    border: 2px solid brown;
+    color: brown;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    display: none;
+}
+
+.popup.active:focus{
+    filter: blur(10px);
+    opacity: 0.2;
+    position: relative;
+}
+.popup{
+    position: fixed;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    z-index: 9999;
+    width: 800px;
+    height: 550px;
+    padding: 20px 30px;
+    background: brown;
+    box-shadow: 0px 0px 10px 10px rgb(92, 28, 28);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: top 0ms ease-in-out 500ms,
+                opacity 500ms ease-in-out 0ms,
+                transform 500ms ease-in-out 50ms;
+}
+/* 
+body.blur #blur::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 10vh;
+    width: 100vh;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+} */
+
+.popup.active{
+    visibility: visible;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 500ms ease-in-out 0ms,
+                transform 500ms ease-in-out 50ms
+}
+.popup .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: rgb(92, 28, 28);
+    color: rgb(199, 169, 130);
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup .form h2{
+    text-align: center;
+    color: rgb(92, 28, 28);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 25px;
+}
+.popup .form .form-element{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    position: relative;
+}
+.popup .form .form-element label{
+    font-size: 16px;
+    color: rgb(92, 28, 28);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 130px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.popup .form .form-element input{
+    width: 500px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(200, 170, 132);
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(92, 28, 28);
+    background: transparent;
+}
+.popup .form .form-element input:focus ~ label,
+.popup .form .form-element input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: rgb(200, 170, 132);
+    font-size: 14px;
+}
+
+.popup .form .form-element button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(92, 28, 28);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    background: none;
+    border: none;
+}
+.popup .form .form-element button:hover{
+    background: rgb(92, 28, 28);
+    color: rgb(199, 169, 130);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(92, 28, 28),
+                0 0 25px rgb(92, 28, 28),
+                0 0 50px rgb(92, 28, 28),
+                0 0 100px rgb(92, 28, 28);
+}
+
+.popup .form .form-element button span {
+    position: absolute;
+    display: block;
+}
+
+.popup .form .form-element button:hover span {
+    opacity: 1;
+}
+
+.popup .form .form-element button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(92, 28, 28));
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.popup .form .form-element button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgb(92, 28, 28));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+.popup .form .form-element button span:nth-child(3) {
+    right: -100%;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(270deg, transparent, rgb(92, 28, 28));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.popup .form .form-element button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, rgb(92, 28, 28));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+.one{
+    margin-top: 25px; 
+    border: 2px solid rgb(200, 170, 132);
+    border-radius: 10px; 
+    width: 1300px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
